@@ -11,6 +11,10 @@ To get started with this project, follow these steps:
 
 pip install -r requirements.txt
 
+Train the Rasa chatbot by running the command:
+
+rasa train
+
 Start the Rasa server by running the command:
 
 css
@@ -23,21 +27,24 @@ Start the Flask web application by running the command:
 
     Open your web browser and navigate to http://localhost:5000 to interact with the chatbot.
 
+Training the Chatbot
+
+To train the Rasa chatbot, you will need to create or modify the following files in the data directory:
+
+    nlu.md: This file contains the examples of user messages and the intents they correspond to.
+    stories.md: This file contains example conversations between the user and the chatbot.
+    domain.yml: This file defines the intents, entities, actions, and templates used by the chatbot.
+
+Once you have modified these files to your liking, you can train the chatbot by running the following command:
+
+rasa train
+
+This will create a new model based on the data in the data directory, which can be used to respond to user messages.
 Requirements
 
 The following dependencies are required to run this project:
 
     Rasa
     Flask
+    Python 3.8
 
-You can install these dependencies by running the following command:
-
-pip install -r requirements.txt
-
-License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-That should give your users a good idea of how to get started with your project and what dependencies they need to install. Make sure to include a requirements.txt file in your repository that lists all of the dependencies needed to run the project.
-Was this response better or worse?
-ChatGPT Mar 23 Version. Free Research Preview. ChatGPT may produce inaccurate information about people, places, or facts.
